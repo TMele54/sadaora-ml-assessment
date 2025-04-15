@@ -1,11 +1,3 @@
-
-############################################# This is very rough and not for review
- This is very rough and not for review #############################################
-############################################# This is very rough and not for review
- This is very rough and not for review #############################################
-############################################# This is very rough and not for review
- This is very rough and not for review #############################################
-
 # sadaora-ml-assessment
 machine learning assessment
 
@@ -49,15 +41,5 @@ given the amount of supporting staff per work location given here https://www.ka
 
 
 I need to explore:
-https://www.kaggle.com/datasets/cms/cms-pbj-daily-nurse-staggins-2017-2018
-https://www.kaggle.com/datasets/chiebukar/daily-nurse-staffing-2024-q2
 https://www.kaggle.com/datasets/anthonytherrien/half-a-million-lifestyle
 
-
-
-############################################# This is very rough and not for review
- This is very rough and not for review #############################################
-############################################# This is very rough and not for review
- This is very rough and not for review #############################################
-############################################# This is very rough and not for review
- This is very rough and not for review #############################################
