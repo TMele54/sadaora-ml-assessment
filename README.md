@@ -23,15 +23,37 @@ Looking for a dataset to use, candidates from kaggle and others are:
 17. https://www.kaggle.com/datasets/shreyasparaj1/lung-cancer-dataset risk of
  
 
-Idea:
+# Idea:
 I took nurse working hours from https://data.cms.gov/quality-of-care/payroll-based-journal-daily-nurse-staffing/data
 and explored their key trends. I discovered CNA, RN, and LPN were the highest percentage workers vs all nurses and even
 other specialties like pharmacist or physicians assistant. Then for RN, LPN, and CNA, I compiled their worked hours as
 a percentage of employee hours vs contract hours. If a nursing home had more contract hours than employee hours they
 were labeled a contractor and vice versa. This created a supervised binary problem and so I chose a Logistic Regression
 with LDA on a Standard scalar for normalization. I also tried a multi layered perceptron to see if there was any 
-meaningful improvement in F1, accur, recall but the LR outperformed across the board on most runs. 
+meaningful improvement in F1, accuracy, recall but the LR outperformed across the board on most runs. The data for this
+project is too large for Github and easy sharing. I included code that can be used to download the files, but for ease
+of sharing, I have saved the files in parquet file type.
 
-The data for this project is too large for Github and easy sharing. I included code that can be used to download the 
-files, but for ease of sharing, I have saved the files in parquet file type.
+# Why I chose this approach:
+
+
+
+# Production
+This model is lightweight and doesn't require extensive infrastructure to operate. Given the anticipated low traffic, 
+I would deploy it on an EC2 instance—possibly a free-tier option like t2.micro—using python FastAPI, with Pydantic schemas 
+to validate data and maintain data model integrity. To ensure stability, I would integrate  monitoring services that 
+alert me to any server issues and configure Ubuntu to automatically restart the API if it stops running. 
+Logging would be incorporated to capture user data and track performance metrics such as overall utilization. I would 
+implement a blue-green deployment strategy to seamlessly swap new models into production without service interruptions, 
+allowing for continuous improvement.
+
+For a more robust and scalable approach, I would prioritize machine learning operations. Leveraging Apache Airflow,
+I would streamline data movement through the API while maintaining version control and a feature store utilizing 
+Pydantic models. To monitor the model’s classification accuracy—especially as nursing home trends evolve—I would
+consider continuous training to keep it up to date. Deploying on edge servers would help mitigate DDoS attacks, while
+Airflow would support ongoing monitoring and tracking of the model's performance over time.
+
+
+
+
 
