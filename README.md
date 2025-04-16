@@ -35,7 +35,7 @@ project is too large for Github and easy sharing. I included code that can be us
 of sharing, I have saved the files in parquet file type.
 
 # Why I chose this approach:
-
+I looked through the different nursing datasets of kaggle
 
 
 # Production
